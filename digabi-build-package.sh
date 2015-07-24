@@ -50,7 +50,8 @@ vtemp() {
 }
 
 vsource() {
-    vrun /tools/source.sh "$1" "$2"
+    TYPE="git"
+    vrun /tools/source.sh ${TYPE} "$1" "$2"
 }
 
 vbuild() {
