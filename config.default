@@ -1,1 +1,10 @@
+# Default configuration for digabi-build-package
+
+# Config files will be read in following order:
+#  - this file (/usr/lib/digabi-build-package/dbp.conf)
+#  - local config (/etc/dbp.conf)
+#  - user config ($HOME/.dbp.conf)
+#  - current dir ($PWD/.dbp.conf)
+
+# Path to Vagrantfile we want to use as build-environment
 export VAGRANT_VAGRANTFILE="/usr/lib/digabi-build-package/Vagrantfile"

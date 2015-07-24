@@ -8,9 +8,9 @@ set -e
 # License: GPLv2
 
 
-if [ -r /usr/lib/digabi-build-package/config.sh ]
+if [ -r /usr/lib/digabi-build-package/dbp.conf ]
 then
-    . /usr/lib/digabi-build-package/config.sh
+    . /usr/lib/digabi-build-package/dbp.conf
 fi
 if [ -r /etc/dbp.conf ]
 then
