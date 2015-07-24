@@ -1,1 +1,1 @@
-export VAGRANT_CWD="/usr/lib/digabi-build-package"
+export VAGRANT_VAGRANTFILE="/usr/lib/digabi-build-package/Vagrantfile"
