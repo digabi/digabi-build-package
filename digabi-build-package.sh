@@ -57,6 +57,11 @@ vbuild() {
     vrun sudo /tools/build.sh "$1"
 }
 
+vsync() {
+    echo "TODO"
+#    rsync -e `vagrant ssh default --` TODO TODO
+}
+
 trap cleanup EXIT
 
 echo "I: Initializing VM..."
