@@ -37,7 +37,7 @@ vbuild() {
     vrun sudo /tools/build.sh "$1"
 }
 
-#trap cleanup EXIT
+trap cleanup EXIT
 
 echo "I: Initializing VM..."
 vinit
