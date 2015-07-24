@@ -1,0 +1,20 @@
+Source: digabi-build-package
+Section: misc
+Priority: optional
+Maintainer: Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.6
+Homepage: https://github.com/digabi/digabi-build-package
+#Vcs-Git: git://anonscm.debian.org/collab-maint/digabi-build-package.git
+#Vcs-Browser: https://anonscm.debian.org/gitweb/?p=collab-maint/digabi-build-package.git;a=summary
+
+Package: digabi-build-package
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, vagrant
+Description: tool for building debian packages inside vagrant vm
+ This package provides /usr/bin/dbp helper for building debian
+ packages using single command: dbp <source>.
+ .
+ Source can be virtually anything. Currently supported sources:
+  * git
+
