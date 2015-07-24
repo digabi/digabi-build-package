@@ -5,6 +5,14 @@ set -e
 # Build Debian package(s) (.deb) in Vagrant environment
 #
 
+SOURCE="$1"
+if [ -z "${SOURCE}" ]
+then
+    echo "E: No source specified!"
+    echo "usage: $0 <source>"
+    exit 1
+fi
+
 cleanup() {
     vagrant destroy -f
 }
