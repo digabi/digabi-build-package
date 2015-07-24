@@ -4,6 +4,22 @@ set -e
 #
 # Build Debian package(s) (.deb) in Vagrant environment
 #
+# Author: Ville Korhonen <ville@xd.fi>
+# License: GPLv2
+
+
+if [ -r /usr/lib/digabi-build-package/config.sh ]
+then
+    . /usr/lib/digabi-build-package/config.sh
+fi
+if [ -r /etc/dbp.conf ]
+then
+    . /etc/dbp.conf
+fi
+if [ -r ${HOME}/.dbp.conf ]
+then
+    . ${HOME}/.dbp.conf
+fi
 
 SOURCE="$1"
 if [ -z "${SOURCE}" ]
