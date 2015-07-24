@@ -7,4 +7,4 @@ install:
 	install -D -m 0644 config.default $(DESTDIR)/usr/lib/digabi-build-package/config.sh
 	
 	install -D -m 0644 Vagrantfile $(DESTDIR)/usr/lib/digabi-build-package/Vagrantfile
-	sed -i 's,./tools,$(DESTDIR)/usr/lib/digabi-build-package/tools,g' $(DESTDIR)/usr/lib/digabi-build-package/Vagrantfile
+	sed -i 's,\./tools,$(DESTDIR)/usr/lib/digabi-build-package/tools,g' $(DESTDIR)/usr/lib/digabi-build-package/Vagrantfile
