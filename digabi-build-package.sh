@@ -20,6 +20,10 @@ if [ -r ${HOME}/.dbp.conf ]
 then
     . ${HOME}/.dbp.conf
 fi
+if [ -r ${PWD}/.dbp.conf ]
+then
+    . ${PWD}/.dbp.conf
+fi
 
 SOURCE="$1"
 if [ -z "${SOURCE}" ]
