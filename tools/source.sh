@@ -10,7 +10,7 @@ in
     fs)
         echo "I: Source rsync'd to ${TARGET}/src"
         mkdir -p ${TARGET}/src
-        rsync -avh --exclude=dist/* /vagrant/* ${TARGET}/src
+        rsync -avh --exclude=.vagrant/* --exclude=dist/* /vagrant/* ${TARGET}/src
     ;;
     git)
         sudo apt-get -yq install git
