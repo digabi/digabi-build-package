@@ -12,6 +12,6 @@ Vagrant.configure(2) do |config|
     export DEBIAN_FRONTEND=noninteractive
     sudo apt-get update
     sudo apt-get -qy dist-upgrade
-    sudo apt-get -qy install build-essential packaging-dev devscripts lintian dpatch quilt fakeroot equivs git
+    sudo apt-get -qy install build-essential packaging-dev devscripts lintian dpatch quilt fakeroot equivs git rsync
   SHELL
 end

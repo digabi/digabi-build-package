@@ -51,6 +51,7 @@ vtemp() {
 
 vsource() {
     TYPE="git"
+    [ -d "$1" ] && TYPE="fs"
     vrun /tools/source.sh ${TYPE} "$1" "$2"
 }
 
@@ -61,6 +62,10 @@ vbuild() {
 vsync() {
     echo "TODO"
 #    rsync -e `vagrant ssh default --` TODO TODO
+}
+
+vartifacts() {
+    vrun /tools/artifacts.sh "$1"
 }
 
 trap cleanup EXIT
@@ -76,3 +81,6 @@ vsource "$1" "${TEMPDIR}"
 
 echo "I: Building..."
 vbuild "${TEMPDIR}"
+
+echo "I: Collecting artifacts..."
+vartifacts "${TEMPDIR}"

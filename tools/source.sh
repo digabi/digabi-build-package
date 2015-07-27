@@ -9,6 +9,7 @@ case "${TYPE}"
 in
     fs)
         echo "I: Source rsync'd to ${TARGET}/src" 
+        rsync -avh /vagrant/* ${TARGET}/src
     ;;
     git)
         sudo apt-get -yq install git
