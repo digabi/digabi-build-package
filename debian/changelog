@@ -1,3 +1,10 @@
+digabi-build-package (0.3.10) unstable; urgency=medium
+
+  * Fix artifact collecting.
+  * Don't sync dist/ to build environment.
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Mon, 27 Jul 2015 08:43:58 +0300
+
 digabi-build-package (0.3.9) unstable; urgency=medium
 
   * Use tempdir/src as build directory.
