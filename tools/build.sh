@@ -1,7 +1,7 @@
 #!/bin/sh
 set -ex
 
-cd "$1"
+cd "$1/src"
 
 echo "I: Installing build-dependencies..."
 mk-build-deps -i -r --tool="apt-get --no-install-recommends -y"

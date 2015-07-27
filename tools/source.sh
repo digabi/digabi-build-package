@@ -14,8 +14,8 @@ in
     ;;
     git)
         sudo apt-get -yq install git
-        echo "I: Checking out sources from git (source: ${SOURCE}, target: ${TARGET})..."
-        git clone "${SOURCE}" "${TARGET}"
+        echo "I: Checking out sources from git (source: ${SOURCE}, target: ${TARGET}/src)..."
+        git clone "${SOURCE}" "${TARGET}/src"
     ;;
     *)
         echo "E: Unsupported source type: ${TYPE}"
