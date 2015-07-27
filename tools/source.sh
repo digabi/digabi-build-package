@@ -8,7 +8,8 @@ TARGET="$3"
 case "${TYPE}"
 in
     fs)
-        echo "I: Source rsync'd to ${TARGET}/src" 
+        echo "I: Source rsync'd to ${TARGET}/src"
+        mkdir -p ${TARGET}/src
         rsync -avh /vagrant/* ${TARGET}/src
     ;;
     git)
