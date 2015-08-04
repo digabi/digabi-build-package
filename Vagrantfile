@@ -10,6 +10,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision "shell", inline: <<-SHELL
     export DEBIAN_FRONTEND=noninteractive
+    sudo dpkg --add-architecture i386
     sudo apt-get update
     sudo apt-get -qy dist-upgrade
     sudo apt-get -qy install build-essential packaging-dev devscripts lintian dpatch quilt fakeroot equivs git rsync
