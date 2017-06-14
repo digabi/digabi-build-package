@@ -2,11 +2,11 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  config.vm.provider "virtualbox"
-  config.vm.box = "debian/jessie64"
+  config.vm.box = "vagrantbox-debian-jessie-amd64"
+  config.vm.box_url = "http://ci.local/job/vagrant-baseboxen-multiarch/BITS=64/lastSuccessfulBuild/artifact/metadata.json"
   # config.vm.box_check_update = false
   # config.vm.synced_folder "../data", "/vagrant_data"
-  config.vm.synced_folder "./tools", "/tools"
+  config.vm.synced_folder "./tools", "/tools", type: "rsync"
   config.vm.synced_folder "./dist", "/dist", create: true
 
   config.vm.provision "shell", inline: <<-SHELL
