@@ -15,5 +15,7 @@ Vagrant.configure(2) do |config|
     sudo apt-get update
     sudo apt-get -qy dist-upgrade
     sudo apt-get -qy install build-essential packaging-dev devscripts lintian dpatch quilt fakeroot equivs git rsync
+    sudo sed -i -e 's/#\(precedence ::ffff:.*100\)/\1/' /etc/gai.conf
+    sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
   SHELL
 end
