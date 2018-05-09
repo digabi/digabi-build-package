@@ -10,7 +10,7 @@ Homepage: https://github.com/digabi/digabi-build-package
 
 Package: digabi-build-package
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, vagrant, rsync
+Depends: ${shlibs:Depends}, ${misc:Depends}, rsync
 Description: tool for building debian packages inside vagrant vm
  This package provides /usr/bin/dbp helper for building debian
  packages using single command: dbp <source>.
